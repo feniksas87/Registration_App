@@ -30,4 +30,5 @@ public class OrderCalculator {
 		priceEvent = order * event;
 		return priceEvent;
 	}
+
 }
