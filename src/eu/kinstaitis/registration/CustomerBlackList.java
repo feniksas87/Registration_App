@@ -2,86 +2,87 @@ package eu.kinstaitis.registration;
 
 public class CustomerBlackList {
 
-	private String name;
-	private String secondName; // possible null
-	private String secondSurname; // possible null
-	private String surname;
-	private String email;
-	private String phoneNumber;
-	private String textMasage;
-	private String city;
-	private String country;
+    private String name;
+    private String secondName; // possible null
+    private String secondSurname; // possible null
+    private String surname;
+    private String email;
+    private String phoneNumber;
+    private String textMasage;
+    private String city;
 
-	public String getName() {
-		return name;
-	}
+    private String country;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getSecondName() {
-		return secondName;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setSecondName(String secondName) {
-		this.secondName = secondName;
-	}
+    public String getSecondName() {
+        return secondName;
+    }
 
-	public String getSecondSurname() {
-		return secondSurname;
-	}
+    public void setSecondName(String secondName) {
+        this.secondName = secondName;
+    }
 
-	public void setSecondSurname(String secondSurname) {
-		this.secondSurname = secondSurname;
-	}
+    public String getSecondSurname() {
+        return secondSurname;
+    }
 
-	public String getSurname() {
-		return surname;
-	}
+    public void setSecondSurname(String secondSurname) {
+        this.secondSurname = secondSurname;
+    }
 
-	public void setSurname(String surname) {
-		this.surname = surname;
-	}
+    public String getSurname() {
+        return surname;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public String getEmail() {
+        return email;
+    }
 
-	public String getPhoneNumber() {
-		return phoneNumber;
-	}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 
-	public String getTextMasage() {
-		return textMasage;
-	}
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 
-	public void setTextMasage(String textMasage) {
-		this.textMasage = textMasage;
-	}
+    public String getTextMasage() {
+        return textMasage;
+    }
 
-	public String getCity() {
-		return city;
-	}
+    public void setTextMasage(String textMasage) {
+        this.textMasage = textMasage;
+    }
 
-	public void setCity(String city) {
-		this.city = city;
-	}
+    public String getCity() {
+        return city;
+    }
 
-	public String getCountry() {
-		return country;
-	}
+    public void setCity(String city) {
+        this.city = city;
+    }
 
-	public void setCountry(String country) {
-		this.country = country;
-	}
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
 
 }
