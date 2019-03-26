@@ -3,8 +3,6 @@ package eu.kinstaitis.registration;
 public class Customer {
 
     private String name;
-    private String secondName; // possible null
-    private String secondSurname; // possible null
     private String surname;
     private String email;
     private String phoneNumber;
@@ -18,22 +16,6 @@ public class Customer {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getSecondName() {
-        return secondName;
-    }
-
-    public void setSecondName(String secondName) {
-        this.secondName = secondName;
-    }
-
-    public String getSecondSurname() {
-        return secondSurname;
-    }
-
-    public void setSecondSurname(String secondSurname) {
-        this.secondSurname = secondSurname;
     }
 
     public String getSurname() {

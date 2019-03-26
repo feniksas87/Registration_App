@@ -2,7 +2,7 @@ package eu.kinstaitis.registration.test;
 
 import eu.kinstaitis.registration.Order;
 
-public class Testas {
+public class Testing {
 
 	public static void main(String[] args) {
 		System.out.println("Testing");
