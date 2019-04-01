@@ -1,4 +1,4 @@
-package eu.kinstaitis.registration;
+package eu.kinstaitis.registration.custumer;
 
 public class Person {
 

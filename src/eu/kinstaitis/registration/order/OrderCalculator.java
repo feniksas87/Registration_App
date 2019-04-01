@@ -1,4 +1,4 @@
-package eu.kinstaitis.registration;
+package eu.kinstaitis.registration.order;
 
 public class OrderCalculator {
 
@@ -10,18 +10,12 @@ public class OrderCalculator {
 	int pricePhosh;
 	int priceEvent;
 
-	// summer
-	// 1h 90eur wedings and
-	// 1h 40eur photoshoot
 	public int weding() {
-
 		priceWed = order * wed;
 		return priceWed;
-
 	}
 
 	public int photoshoot() {
-
 		pricePhosh = order * phosh;
 		return pricePhosh;
 	}

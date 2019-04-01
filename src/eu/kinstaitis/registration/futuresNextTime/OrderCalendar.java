@@ -1,4 +1,4 @@
-package eu.kinstaitis.registration.order;
+package eu.kinstaitis.registration.futuresNextTime;
 
 import java.util.Calendar;
 import java.util.Date;

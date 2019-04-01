@@ -1,14 +1,18 @@
-package eu.kinstaitis.registration;
+package eu.kinstaitis.registration.order;
 
-//import javax.validation.constraints.NotNull;
+import eu.kinstaitis.registration.event.Events;
+import eu.kinstaitis.registration.citys.City;
+import eu.kinstaitis.registration.custumer.Customer;
+import eu.kinstaitis.registration.custumer.Person;
 
 public class Order {
 
     private Long orderId;
     private String customer; //class
     private String data;
-    private String event; //class
+    private Events events;
     private String message;
+    private City city;
     private String orderCalculator; //class
 
     public Long getOrderId() {
@@ -35,12 +39,12 @@ public class Order {
         this.data = data;
     }
 
-    public String getEvent() {
-        return event;
+    public Events getEvents() {
+        return events;
     }
 
-    public void setEvent(String event) {
-        this.event = event;
+    public void setEvents(Events events) {
+        this.events = events;
     }
 
     public String getMessage() {
@@ -51,6 +55,14 @@ public class Order {
         this.message = message;
     }
 
+    public City getCity() {
+        return city;
+    }
+
+    public void setCity(City city) {
+        this.city = city;
+    }
+
     public String getOrderCalculator() {
         return orderCalculator;
     }
@@ -58,5 +70,4 @@ public class Order {
     public void setOrderCalculator(String orderCalculator) {
         this.orderCalculator = orderCalculator;
     }
-
 }
