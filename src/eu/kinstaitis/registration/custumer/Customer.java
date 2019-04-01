@@ -10,6 +10,16 @@ public class Customer {
     private String city;
     private String country;
 
+    public Customer(String name, String surname, String email, String phoneNumber, String textMasage, String city, String country) {
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.textMasage = textMasage;
+        this.city = city;
+        this.country = country;
+    }
+
     public String getName() {
         return name;
     }
