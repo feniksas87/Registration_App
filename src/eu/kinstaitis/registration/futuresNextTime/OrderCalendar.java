@@ -1,4 +1,4 @@
-package eu.kinstaitis.registration;
+package eu.kinstaitis.registration.order;
 
 import java.util.Calendar;
 import java.util.Date;
