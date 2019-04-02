@@ -1,16 +1,16 @@
 package eu.kinstaitis.registration.order;
 
-import eu.kinstaitis.registration.event.Events;
+import eu.kinstaitis.registration.event.Event;
 import eu.kinstaitis.registration.custumer.Customer;
 
 
 public class Order {
 
     private Long orderId;
-    private Customer customer; //class
+    private Customer customer;
     private String data;
-    private Events events; // vienaskaita
-    private double price; //class
+    private Event event;
+    private double price;
     private String place;
     
 	public Long getOrderId() {
@@ -31,11 +31,11 @@ public class Order {
 	public void setData(String data) {
 		this.data = data;
 	}
-	public Events getEvents() {
-		return events;
+	public Event getEvents() {
+		return event;
 	}
-	public void setEvents(Events events) {
-		this.events = events;
+	public void setEvents(Event events) {
+		this.event = events;
 	}
 	public double getPrice() {
 		return price;
