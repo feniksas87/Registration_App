@@ -5,7 +5,7 @@ import eu.kinstaitis.registration.event.Event;
 
 public class PhotoEvents {
 	
-	public Order uzsaky(Customer customer, String data, Event events, String place) {
+	public Order book(Customer customer, String data, Event events, String place) {
 		
 		return null;
 	}
