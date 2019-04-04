@@ -39,7 +39,8 @@ public class OrderCalculator {
 		OrderCalculator cal = new OrderCalculator();
 
 		System.out.println();
-		System.out.println("Kaina: " + cal.calcPrice(EventType.Commercial));
+		System.out.println("Price: " + cal.calcPrice(EventType.Wedding) + "\u20ac");
+		System.out.println("Price: " + cal.calcPrice(EventType.Event) + "\u20ac");
 
 	}
 
