@@ -1,8 +1,5 @@
 package eu.kinstaitis.registration.pojo;
 
-import eu.kinstaitis.registration.event.EventType;
-
-
 public class Order {
 
     private Long orderId;

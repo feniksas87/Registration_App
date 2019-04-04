@@ -3,69 +3,43 @@ package eu.kinstaitis.registration.order;
 import java.util.HashMap;
 import java.util.Map;
 
-import eu.kinstaitis.registration.event.EventType;
+import eu.kinstaitis.registration.pojo.EventType;
 
 public class OrderCalculator {
 
-	public static void main(String[] args) {
+	private Map<EventType, Double> prices = new HashMap<>();
 
-		Map<String, String> type = new HashMap<>();
-		type.put("Wedding", "350");
-		type.put("Christening", "200");
+	public OrderCalculator() {
+
+		prices.put(EventType.Wedding, 1000.0);
+		prices.put(EventType.Christening, 600.0);
+		prices.put(EventType.GivingAname, 600.0);
+		prices.put(EventType.Party, 200.0);
+		prices.put(EventType.Conference, 100.0);
+		prices.put(EventType.Concert, 200.0);
+		prices.put(EventType.Photoshoot, 160.0);
+		prices.put(EventType.ModelPortfolio, 100.0);
+		prices.put(EventType.Event, 300.0);
+		prices.put(EventType.SportEvent, 500.0);
+		prices.put(EventType.Animals, 300.0);
+		prices.put(EventType.Commercial, 1000.0);
+		prices.put(EventType.Jewelry, 1000.0);
+		prices.put(EventType.Interior, 1000.0);
+		prices.put(EventType.Other, 1000.0);
+
 	}
 
 	public double calcPrice(EventType type) {
 
-		switch (type) {
-		case Wedding:
-			System.out.println("350");
-			break;
-		case Christening:
-			System.out.println("200");
-			break;
-		case GivingAname:
-			System.out.println("200");
-			break;
-		case Party:
-			System.out.println("200");
-			break;
-		case Conference:
-			System.out.println("100");
-			break;
-		case Photoshoot:
-			System.out.println("90");
-			break;
-		case ModelPortfolio:
-			System.out.println("90");
-			break;
-		case Event:
-			System.out.println("120");
-			break;
-		case SportEvent:
-			System.out.println("180");
-			break;
-		case Animals:
-			System.out.println("100");
-			break;
-		case Commercial:
-			System.out.println("250");
-			break;
-		case Jewelry:
-			System.out.println("80");
-			break;
-		case Concert:
-			System.out.println("200");
-			break;
-		case Interior:
-			System.out.println("300");
-			break;
-		case Other:
-			System.out.println("Call");
-			break;
-		default:
-			break;
-		}
-		return 0;
+		return prices.get(type);
+	}
+
+	public static void main(String[] args) {
+
+		OrderCalculator cal = new OrderCalculator();
+
+		System.out.println();
+		System.out.println("Kaina: " + cal.calcPrice(EventType.Commercial));
 
 	}
 

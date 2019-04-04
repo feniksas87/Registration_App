@@ -1,7 +1,7 @@
 package eu.kinstaitis.registration.order;
 
-import eu.kinstaitis.registration.event.EventType;
 import eu.kinstaitis.registration.pojo.Customer;
+import eu.kinstaitis.registration.pojo.EventType;
 import eu.kinstaitis.registration.pojo.Order;
 
 public class PhotoEvents {

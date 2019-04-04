@@ -1,4 +1,4 @@
-package eu.kinstaitis.registration.event;
+package eu.kinstaitis.registration.pojo;
 
 public enum EventType {
 	 Wedding,
