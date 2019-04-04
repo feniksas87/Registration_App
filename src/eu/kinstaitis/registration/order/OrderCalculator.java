@@ -1,6 +1,12 @@
 package eu.kinstaitis.registration.order;
 
+import eu.kinstaitis.registration.event.EventType;
+import java.util.Map;
+import java.util.HashMap;
+
 public class OrderCalculator {
+	
+	Map booking = new HashMap();
 
 	int wed = 90;
 	int phosh = 40;
@@ -9,7 +15,11 @@ public class OrderCalculator {
 	int priceWed;
 	int pricePhosh;
 	int priceEvent;
+	
+	public double calcPrice(EventType type) {
+		return priceEvent;
 
+	}
 	public int weding() {
 		priceWed = order * wed;
 		return priceWed;
@@ -24,5 +34,6 @@ public class OrderCalculator {
 		priceEvent = order * event;
 		return priceEvent;
 	}
+	
 
 }

@@ -1,4 +1,4 @@
-package eu.kinstaitis.registration.custumer;
+package pojo;
 
 public class Customer {
 

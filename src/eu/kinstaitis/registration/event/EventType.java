@@ -1,6 +1,6 @@
 package eu.kinstaitis.registration.event;
 
-public enum Event {
+public enum EventType {
 	 Wedding,
 	    Christening,
 	    GivingAname,

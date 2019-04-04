@@ -1,7 +1,6 @@
-package eu.kinstaitis.registration.order;
+package pojo;
 
-import eu.kinstaitis.registration.event.Event;
-import eu.kinstaitis.registration.custumer.Customer;
+import eu.kinstaitis.registration.event.EventType;
 
 
 public class Order {
@@ -9,7 +8,7 @@ public class Order {
     private Long orderId;
     private Customer customer;
     private String data;
-    private Event event;
+    private EventType event;
     private double price;
     private String place;
     
@@ -31,10 +30,10 @@ public class Order {
 	public void setData(String data) {
 		this.data = data;
 	}
-	public Event getEvents() {
+	public EventType getEvents() {
 		return event;
 	}
-	public void setEvents(Event events) {
+	public void setEvents(EventType events) {
 		this.event = events;
 	}
 	public double getPrice() {
