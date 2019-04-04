@@ -1,4 +1,4 @@
-package pojo;
+package eu.kinstaitis.registration.pojo;
 
 import eu.kinstaitis.registration.event.EventType;
 
