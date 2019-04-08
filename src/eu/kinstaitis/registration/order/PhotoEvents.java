@@ -1,23 +1,40 @@
 package eu.kinstaitis.registration.order;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import eu.kinstaitis.registration.pojo.Customer;
 import eu.kinstaitis.registration.pojo.EventType;
 import eu.kinstaitis.registration.pojo.Order;
 
 public class PhotoEvents {
 
-	public Order book(Customer customer, String data, EventType events, String place) {
+	private List<Order> orders = new ArrayList<Order>();
+
+	public Order book(Order order) {
+		if (isOrderValid(order)) {
+
+			orders.add(fillAttributes(order));
+		}
+
+		return order;
+	}
+
+	private Order fillAttributes(Order order) {
 
 		return null;
 	}
 
-	public Order bookingList(Customer customer, String data, EventType events, String place) {
+	private boolean isOrderValid(Order order) {
 
-		return null;
+		if (order == null) {
+			return false;
+		}
+		return true;
 	}
 
 	/*
-	 * evenet is not cansel?
+	 * event is not canceled?
 	 *
 	 *
 	 */
@@ -25,4 +42,10 @@ public class PhotoEvents {
 	public boolean order() {
 		return true;
 	}
+
+	public Order bookingList(Customer customer, String data, EventType events, String place) {
+
+		return null;
+	}
+
 }
