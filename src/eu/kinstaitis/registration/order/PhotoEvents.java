@@ -27,7 +27,13 @@ public class PhotoEvents {
 
 	private boolean isOrderValid(Order order) {
 
-		if (order == null) {
+		if (order.getCustomer() == null) {
+			return false;
+		}
+		if (order.getData() == null) {
+			return false;
+		}
+		if (order.getPlace() == null) {
 			return false;
 		}
 		return true;
@@ -35,8 +41,6 @@ public class PhotoEvents {
 
 	/*
 	 * event is not canceled?
-	 *
-	 *
 	 */
 
 	public boolean order() {
