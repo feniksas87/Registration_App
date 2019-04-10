@@ -8,6 +8,7 @@ public class Order {
 	private EventType event;
 	private double price;
 	private String place;
+	private boolean caceled = false;
 
 	public Order(Long orderId, Customer customer, String data, EventType event, double price, String place) {
 
@@ -17,6 +18,22 @@ public class Order {
 		this.event = event;
 		this.price = price;
 		this.place = place;
+	}
+
+	public EventType getEvent() {
+		return event;
+	}
+
+	public void setEvent(EventType event) {
+		this.event = event;
+	}
+
+	public boolean isCaceled() {
+		return caceled;
+	}
+
+	public void setCaceled(boolean caceled) {
+		this.caceled = caceled;
 	}
 
 	public Long getOrderId() {

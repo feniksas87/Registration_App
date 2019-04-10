@@ -3,15 +3,13 @@ package eu.kinstaitis.registration.order;
 import java.util.ArrayList;
 import java.util.List;
 
-import eu.kinstaitis.registration.pojo.Customer;
-import eu.kinstaitis.registration.pojo.EventType;
 import eu.kinstaitis.registration.pojo.Order;
 
 public class PhotoEvents {
 
 	private List<Order> orders = new ArrayList<Order>();
 
-	public Order book(Order order) {
+	public Order order(Order order) {
 		if (isOrderValid(order)) {
 
 			orders.add(fillAttributes(order));
@@ -20,8 +18,31 @@ public class PhotoEvents {
 		return order;
 	}
 
-	private Order fillAttributes(Order order) {
+	public boolean cancelOrder(Long orderId) {
+		for (Order order : orders) {
 
+			if (order.getOrderId().equals(orderId)) {
+				if (!order.isCaceled()) {
+					order.setCaceled(true);
+					return true;
+				}
+				break;
+			}
+		}
+		return false;
+	}
+
+	public List<Order> seartch(String txt) {
+		List<Order> seartchResult = new ArrayList<Order>();
+
+		for (Order order : orders) {
+//TODO
+		}
+		return seartchResult;
+	}
+
+	private Order fillAttributes(Order order) {
+//TODO
 		return null;
 	}
 
@@ -42,14 +63,5 @@ public class PhotoEvents {
 	/*
 	 * event is not canceled?
 	 */
-
-	public boolean order() {
-		return true;
-	}
-
-	public Order bookingList(Customer customer, String data, EventType events, String place) {
-
-		return null;
-	}
 
 }

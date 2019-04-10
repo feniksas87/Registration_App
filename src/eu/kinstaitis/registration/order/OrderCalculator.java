@@ -44,4 +44,10 @@ public class OrderCalculator {
 
 	}
 
+	// if it is not in vilnius
+
+	public double calcFinalPrice(OrderCalculator ord) {
+		return 0;
+	}
+
 }
