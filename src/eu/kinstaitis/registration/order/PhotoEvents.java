@@ -3,6 +3,7 @@ package eu.kinstaitis.registration.order;
 import java.util.ArrayList;
 import java.util.List;
 
+import eu.kinstaitis.registration.pojo.Customer;
 import eu.kinstaitis.registration.pojo.EventType;
 import eu.kinstaitis.registration.pojo.Order;
 
@@ -36,11 +37,29 @@ public class PhotoEvents {
 	public List<Order> seartch(String txt) {
 
 		List<Order> seartchResult = new ArrayList<Order>();
+		List<Customer> searchCustumer = new ArrayList<Customer>();
 
 		for (Order order : orders) {
 			if (textConText(order.getPlace(), txt)) {
 				seartchResult.add(order);
 			}
+			if (textConText(order.getData(), txt)) {
+				seartchResult.add(order);
+			}
+
+			for (Customer customer : searchCustumer) {
+				if (textConText(customer.getName(), txt)) {
+					searchCustumer.add(customer);
+				}
+				if (textConText(customer.getEmail(), txt)) {
+					searchCustumer.add(customer);
+				}
+				if (textConText(customer.getPhoneNumber(), txt)) {
+					searchCustumer.add(customer);
+				}
+
+			}
+
 		}
 		return seartchResult;
 	}
