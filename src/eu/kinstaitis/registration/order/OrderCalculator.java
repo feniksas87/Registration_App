@@ -34,20 +34,17 @@ public class OrderCalculator {
 		return prices.get(type);
 	}
 
-	public static void main(String[] args) {
-
-		OrderCalculator cal = new OrderCalculator();
-
-		System.out.println();
-		System.out.println("Price: " + cal.calcPrice(EventType.Wedding) + "\u20ac");
-		System.out.println("Price: " + cal.calcPrice(EventType.Event) + "\u20ac");
-
-	}
-
-	// if it is not in vilnius
-
-	public double calcFinalPrice(OrderCalculator ord) {
-		return 0;
-	}
+//	public static void main(String[] args) {
+//
+//		OrderCalculator cal = new OrderCalculator();
+//
+//		System.out.println();
+//		System.out.println("Price: " + cal.calcPrice(EventType.Wedding) + "\u20ac");
+//		System.out.println("Price: " + cal.calcPrice(EventType.Event) + "\u20ac");
+//
+//	}
+//
+//	// if it is not in vilnius
+//
 
 }

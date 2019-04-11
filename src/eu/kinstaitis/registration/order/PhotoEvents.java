@@ -3,6 +3,7 @@ package eu.kinstaitis.registration.order;
 import java.util.ArrayList;
 import java.util.List;
 
+import eu.kinstaitis.registration.pojo.EventType;
 import eu.kinstaitis.registration.pojo.Order;
 
 public class PhotoEvents {
@@ -12,7 +13,7 @@ public class PhotoEvents {
 	public Order order(Order order) {
 		if (isOrderValid(order)) {
 
-			orders.add(fillAttributes(order));
+			orders.add(fillAttributesForNewOrder(order));
 		}
 
 		return order;
@@ -33,17 +34,41 @@ public class PhotoEvents {
 	}
 
 	public List<Order> seartch(String txt) {
+
 		List<Order> seartchResult = new ArrayList<Order>();
 
 		for (Order order : orders) {
-//TODO
+			if (textConText(order.getPlace(), txt)) {
+				seartchResult.add(order);
+			}
 		}
 		return seartchResult;
 	}
 
-	private Order fillAttributes(Order order) {
-//TODO
-		return null;
+	private boolean textConText(String text, String subtext) {
+
+		if (text.isEmpty()) {
+			return false;
+		}
+		if (subtext.isEmpty()) {
+			return false;
+		}
+		return text.toLowerCase().contains(subtext.toLowerCase());
+
+	}
+
+	private Order fillAttributesForNewOrder(Order order) {
+
+		order.setOrderId(System.currentTimeMillis());
+
+		if (order.getEvent() == null) {
+			order.setEvent(EventType.Other);
+		}
+
+		OrderCalculator orderCalculatator = new OrderCalculator();
+		order.setPrice(orderCalculatator.calcPrice(order.getEvent()));
+
+		return order;
 	}
 
 	private boolean isOrderValid(Order order) {
@@ -59,9 +84,4 @@ public class PhotoEvents {
 		}
 		return true;
 	}
-
-	/*
-	 * event is not canceled?
-	 */
-
 }
