@@ -20,6 +20,12 @@ public class Order {
 		this.place = place;
 	}
 
+	public Order(Customer customer, String data, String place) {
+		this.customer = customer;
+		this.data = data;
+		this.place = place;
+	}
+
 	public EventType getEvent() {
 		return event;
 	}
@@ -83,4 +89,13 @@ public class Order {
 	public void setPlace(String place) {
 		this.place = place;
 	}
+
+	@Override
+	public String toString() {
+
+		return "" + orderId + "; " + customer + "; " + data + "; " + event + "; " + price + "; " + place + "; "
+				+ caceled;
+
+	}
+
 }
